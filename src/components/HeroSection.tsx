@@ -3,7 +3,6 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Star, BookOpen, ArrowRight, Users } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
-import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (

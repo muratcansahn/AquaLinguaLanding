@@ -51,12 +51,14 @@ const GamificationSection = () => {
               </div>
             </div>
             
-            <style jsx>{`
+            <style>
+              {`
               @keyframes rise {
                 0% { transform: translateY(0); opacity: 0.7; }
                 100% { transform: translateY(-300px); opacity: 0; }
               }
-            `}</style>
+              `}
+            </style>
           </div>
           
           <div className="space-y-6">
