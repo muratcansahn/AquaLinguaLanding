@@ -1,31 +1,38 @@
 
 import React from 'react';
-import { BookText, Check, Play, Pen } from 'lucide-react';
+import { BookText, Check, Play, Pen, ArrowRight } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 const activities = [
   {
-    icon: <BookText className="h-8 w-8 text-white" />,
+    icon: <BookText className="h-10 w-10 text-white" />,
     title: "Flashcards",
     description: "Kelimeleri kartlar halinde görüntüleyip sağa veya sola kaydırarak öğrenin.",
-    color: "bg-gradient-to-r from-[#8B5CF6] to-[#9b87f5]"
+    color: "bg-gradient-to-r from-[#8B5CF6] to-[#9b87f5]",
+    difficulty: "Kolay"
   },
   {
-    icon: <Check className="h-8 w-8 text-white" />,
+    icon: <Check className="h-10 w-10 text-white" />,
     title: "Quiz",
     description: "Çoktan seçmeli sorularla bilginizi test edin ve puan kazanın.",
-    color: "bg-gradient-to-r from-[#1EAEDB] to-[#33C3F0]"
+    color: "bg-gradient-to-r from-[#1EAEDB] to-[#33C3F0]",
+    difficulty: "Orta"
   },
   {
-    icon: <Pen className="h-8 w-8 text-white" />,
+    icon: <Pen className="h-10 w-10 text-white" />,
     title: "Writing",
     description: "Kelimelerin harflerini tahmin edin ve yazma becerilerinizi geliştirin.",
-    color: "bg-gradient-to-r from-[#8B5CF6] to-[#9b87f5]"
+    color: "bg-gradient-to-r from-[#8B5CF6] to-[#9b87f5]",
+    difficulty: "Zor"
   },
   {
-    icon: <Play className="h-8 w-8 text-white" />,
+    icon: <Play className="h-10 w-10 text-white" />,
     title: "Word Matching",
     description: "Kelimeleri ve anlamlarını eşleştirerek hafızanızı güçlendirin.",
-    color: "bg-gradient-to-r from-[#1EAEDB] to-[#33C3F0]"
+    color: "bg-gradient-to-r from-[#1EAEDB] to-[#33C3F0]",
+    difficulty: "Orta"
   }
 ];
 
@@ -44,19 +51,35 @@ const ActivitySection = () => {
         
         <div className="grid md:grid-cols-2 gap-8">
           {activities.map((activity, index) => (
-            <div key={index} className="activity-card overflow-hidden bg-white shadow-md border border-gray-100">
-              <div className="flex items-start">
-                <div className={`${activity.color} p-6 flex items-center justify-center`}>
-                  <div className="h-14 w-14 rounded-full bg-white/20 flex items-center justify-center">
+            <Card key={index} className="overflow-hidden border-none shadow-lg">
+              <div className="flex flex-col md:flex-row">
+                <div className={`${activity.color} p-8 flex items-center justify-center md:w-1/3`}>
+                  <div className="h-20 w-20 rounded-full bg-white/20 flex items-center justify-center">
                     {activity.icon}
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{activity.title}</h3>
-                  <p className="text-gray-600">{activity.description}</p>
+                <div className="p-6 md:w-2/3">
+                  <CardHeader className="px-0 pt-0">
+                    <div className="flex justify-between items-center">
+                      <CardTitle className="text-xl">{activity.title}</CardTitle>
+                      <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-200">
+                        {activity.difficulty}
+                      </Badge>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="px-0 py-2">
+                    <CardDescription className="text-gray-600 text-base">
+                      {activity.description}
+                    </CardDescription>
+                  </CardContent>
+                  <CardFooter className="px-0 pt-4 pb-0">
+                    <Button variant="ghost" className="p-0 h-auto text-[#8B5CF6] hover:text-[#7c4dfa] hover:bg-transparent">
+                      Aktiviteyi Dene <ArrowRight className="h-4 w-4 ml-1" />
+                    </Button>
+                  </CardFooter>
                 </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
