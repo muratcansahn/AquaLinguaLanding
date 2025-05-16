@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Star } from 'lucide-react';
+import { Star, BookOpen } from 'lucide-react';
 
 const HeroSection = () => {
   return (
