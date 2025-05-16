@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white py-4 px-6 md:px-10 flex items-center justify-between shadow-sm fixed top-0 w-full z-10">
       <div className="flex items-center gap-2">
-        <BookOpen className="h-6 w-6 text-[#8B5CF6]" />
+        <BookOpen className="h-6 w-6 text-[#1D9BF0]" />
         <span className="font-bold text-xl">WordsApp</span>
       </div>
       
@@ -20,7 +20,7 @@ const Navbar = () => {
       
       <div className="flex items-center gap-4">
         <Button variant="ghost">Giriş</Button>
-        <Button className="bg-[#8B5CF6] hover:bg-[#7c4dfa]">Kayıt Ol</Button>
+        <Button className="bg-[#1D9BF0] hover:bg-[#1a8ad8]">Kayıt Ol</Button>
       </div>
     </nav>
   );

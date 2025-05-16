@@ -5,22 +5,22 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 const features = [
   {
-    icon: <BookOpen className="h-10 w-10 text-[#8B5CF6]" />,
+    icon: <BookOpen className="h-10 w-10 text-[#1D9BF0]" />,
     title: "Kelime Listeleri",
     description: "Kategorilere ayrılmış, seviyenize uygun kelime listeleri ile öğrenmenizi hızlandırın."
   },
   {
-    icon: <Star className="h-10 w-10 text-[#1EAEDB]" />,
+    icon: <Star className="h-10 w-10 text-[#FF8A3C]" />,
     title: "Kişiselleştirilmiş Öğrenme",
     description: "Bildiğiniz ve bilmediğiniz kelimeleri işaretleyerek size özel öğrenme deneyimi."
   },
   {
-    icon: <ListCheck className="h-10 w-10 text-[#8B5CF6]" />,
+    icon: <ListCheck className="h-10 w-10 text-[#1D9BF0]" />,
     title: "İlerleme Takibi",
     description: "Kelime istatistiklerinizi takip edin ve öğrenme sürecinizi analiz edin."
   },
   {
-    icon: <Calendar className="h-10 w-10 text-[#1EAEDB]" />,
+    icon: <Calendar className="h-10 w-10 text-[#FF8A3C]" />,
     title: "Günlük Aktiviteler",
     description: "Düzenli öğrenme alışkanlığı kazanmak için günlük aktiviteler ve hatırlatmalar."
   }
@@ -43,7 +43,7 @@ const FeatureSection = () => {
           {features.map((feature, index) => (
             <Card key={index} className="border-none shadow-md bg-white hover:shadow-lg transition-shadow duration-300">
               <CardHeader className="pb-2">
-                <div className="mb-4 p-2 rounded-lg inline-flex bg-gradient-to-br from-purple-50 to-blue-50">
+                <div className="mb-4 p-2 rounded-lg inline-flex bg-gradient-to-br from-sky-50 to-blue-50">
                   {feature.icon}
                 </div>
                 <CardTitle className="text-xl">{feature.title}</CardTitle>
@@ -52,7 +52,7 @@ const FeatureSection = () => {
                 <CardDescription className="text-gray-600 text-base">
                   {feature.description}
                 </CardDescription>
-                <div className="mt-4 flex items-center text-sm text-[#8B5CF6]">
+                <div className="mt-4 flex items-center text-sm text-[#1D9BF0]">
                   <CheckCircle className="h-4 w-4 mr-1" /> Hemen Başla
                 </div>
               </CardContent>

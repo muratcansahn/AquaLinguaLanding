@@ -10,28 +10,28 @@ const activities = [
     icon: <BookText className="h-10 w-10 text-white" />,
     title: "Flashcards",
     description: "Kelimeleri kartlar halinde görüntüleyip sağa veya sola kaydırarak öğrenin.",
-    color: "bg-gradient-to-r from-[#8B5CF6] to-[#9b87f5]",
+    color: "bg-gradient-to-r from-[#FF8A3C] to-[#FF9E5C]",
     difficulty: "Kolay"
   },
   {
     icon: <Check className="h-10 w-10 text-white" />,
     title: "Quiz",
     description: "Çoktan seçmeli sorularla bilginizi test edin ve puan kazanın.",
-    color: "bg-gradient-to-r from-[#1EAEDB] to-[#33C3F0]",
+    color: "bg-gradient-to-r from-[#1D9BF0] to-[#7DD3F9]",
     difficulty: "Orta"
   },
   {
     icon: <Pen className="h-10 w-10 text-white" />,
     title: "Writing",
     description: "Kelimelerin harflerini tahmin edin ve yazma becerilerinizi geliştirin.",
-    color: "bg-gradient-to-r from-[#8B5CF6] to-[#9b87f5]",
+    color: "bg-gradient-to-r from-[#FF8A3C] to-[#FF9E5C]",
     difficulty: "Zor"
   },
   {
     icon: <Play className="h-10 w-10 text-white" />,
     title: "Word Matching",
     description: "Kelimeleri ve anlamlarını eşleştirerek hafızanızı güçlendirin.",
-    color: "bg-gradient-to-r from-[#1EAEDB] to-[#33C3F0]",
+    color: "bg-gradient-to-r from-[#1D9BF0] to-[#7DD3F9]",
     difficulty: "Orta"
   }
 ];
@@ -73,7 +73,7 @@ const ActivitySection = () => {
                     </CardDescription>
                   </CardContent>
                   <CardFooter className="px-0 pt-4 pb-0">
-                    <Button variant="ghost" className="p-0 h-auto text-[#8B5CF6] hover:text-[#7c4dfa] hover:bg-transparent">
+                    <Button variant="ghost" className="p-0 h-auto text-[#1D9BF0] hover:text-[#1a8ad8] hover:bg-transparent">
                       Aktiviteyi Dene <ArrowRight className="h-4 w-4 ml-1" />
                     </Button>
                   </CardFooter>
