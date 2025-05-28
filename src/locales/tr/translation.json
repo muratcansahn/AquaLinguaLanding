@@ -1,0 +1,214 @@
+{
+  "hero": {
+    "badge": "Eğlenceli dil öğrenme",
+    "title": "Kelime Öğrenmeyi <1>AquaLingua</1> ile Dönüştürün",
+    "description": "Uygulamamız ile kelime öğrenme deneyiminizi oyunlaştırarak eğlenceli ve bağımlılık yaratan bir öğrenme deneyimi sunuyoruz. Her öğrendiğiniz kelime, akvaryumunuzda yeni bir yaşam demektir.",
+    "emailPrompt": "AquaLingua'ya ilk katılanlardan biri olmak ister misin? E-posta adresini bırak, sürprizlerden ve erken erişimden ilk sen haberdar ol!",
+    "emailPlaceholder": "E-posta adresiniz",
+    "joinButton": "Bekleme Listesine Katıl",
+    "privacyNote": "Gizliliğinize saygı duyuyoruz. Bilgilerinizi asla paylaşmayacağız.",
+    "stats": {
+      "wordsLearned": "12 kelime öğrenildi",
+      "streak": "3 gün streak"
+    }
+  },
+  "navbar": {
+    "home": "Ana Sayfa",
+    "features": "Özellikler",
+    "pricing": "Fiyatlandırma",
+    "about": "Hakkımızda",
+    "login": "Giriş Yap",
+    "signup": "Kaydol"
+  },
+  "features": {
+    "title": "Özellikler",
+    "subtitle": "AquaLingua'nın sunduğu benzersiz özellikler",
+    "mainTitle": "Kelime Öğrenmenin En Etkili Yolu",
+    "mainDescription": "Uygulamamızın özellikleri ile dil öğreniminizi daha eğlenceli ve verimli hale getirin.",
+    "items": [
+      {
+        "title": "Kelime Listeleri",
+        "description": "Kategorilere ayrılmış, seviyenize uygun kelime listeleri ile öğrenmenizi hızlandırın."
+      },
+      {
+        "title": "Kişiselleştirilmiş Öğrenme",
+        "description": "Bildiğiniz ve bilmediğiniz kelimeleri işaretleyerek size özel öğrenme deneyimi."
+      },
+      {
+        "title": "İlerleme Takibi",
+        "description": "Kelime istatistiklerinizi takip edin ve öğrenme sürecinizi analiz edin."
+      },
+      {
+        "title": "Günlük Aktiviteler",
+        "description": "Düzenli öğrenme alışkanlığı kazanmak için günlük aktiviteler ve hatırlatmalar."
+      }
+    ],
+    "startNow": "Hemen Başla"
+  },
+  "activity": {
+    "title": "Aktiviteler",
+    "subtitle": "Dil öğrenme aktivitelerimiz",
+    "mainTitle": "Çeşitli Öğrenme Aktiviteleri",
+    "mainDescription": "Farklı öğrenme metodları ile kelimeleri daha etkili bir şekilde öğrenin.",
+    "items": [
+      {
+        "title": "Flashcards",
+        "description": "Kelimeleri kartlar halinde görüntüleyip sağa veya sola kaydırarak öğrenin."
+      },
+      {
+        "title": "Quiz",
+        "description": "Çoktan seçmeli sorularla bilginizi test edin ve puan kazanın."
+      },
+      {
+        "title": "Writing",
+        "description": "Kelimelerin harflerini tahmin edin ve yazma becerilerinizi geliştirin."
+      },
+      {
+        "title": "Word Matching",
+        "description": "Kelimeleri ve anlamlarını eşleştirerek hafızanızı güçlendirin."
+      }
+    ],
+    "new": "Yeni",
+    "startNow": "Hemen Başla"
+  },
+  "gamification": {
+    "title": "Gamifikasyon",
+    "subtitle": "Oyunlaştırılmış öğrenme deneyimi",
+    "mainTitle": "Akvaryumunuzu <1>Büyütün</1>, Kelimeleri Öğrenin",
+    "mainDescription": "AquaLingua'nın eşsiz akvaryum özelliği ile kelime öğrenmeyi eğlenceli bir oyuna dönüştürün. Öğrendikçe puan kazanın, balıklarınızı besleyin ve koleksiyonunuzu genişletin.",
+    "stats": [
+      {
+        "title": "2000+",
+        "subtitle": "Öğrenilebilir Kelime"
+      },
+      {
+        "title": "5+",
+        "subtitle": "Balık Çeşidi (çok yakında)"
+      },
+      {
+        "title": "5",
+        "subtitle": "Günlük Aktivite"
+      },
+      {
+        "title": "3",
+        "subtitle": "Farklı Dil"
+      }
+    ],
+    "createAquarium": "Akvaryumunuzu Oluşturun"
+  },
+  "testimonials": {
+    "title": "Kullanıcı Yorumları",
+    "subtitle": "Kullanıcılarımızın deneyimleri",
+    "mainTitle": "Kullanıcılarımızın Deneyimleri",
+    "mainDescription": "AquaLingua'nın kelime öğrenme deneyiminizi nasıl değiştirdiğini keşfedin.",
+    "items": [
+      {
+        "name": "Ayşe Yılmaz",
+        "role": "İngilizce Öğrencisi",
+        "content": "Uygulama sayesinde 3 ayda 1000'den fazla kelime öğrendim. Akvaryum özelliği beni her gün düzenli çalışmaya teşvik ediyor."
+      },
+      {
+        "name": "Mehmet Kaya",
+        "role": "Almanca Öğrencisi",
+        "content": "Quiz ve flashcard özellikleri sayesinde kelimeleri çok daha kolay hatırlıyorum. AquaLingua'nın gamification yaklaşımı öğrenmeyi çok keyifli hale getiriyor."
+      },
+      {
+        "name": "Zeynep Demir",
+        "role": "İspanyolca Öğrencisi",
+        "content": "Writing aktivitesi sayesinde kelimelerin yazılışını çok daha hızlı öğrendim. Akvaryumdaki balıklarımı büyütmek için her gün en az 15 dakika pratik yapıyorum."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "subtitle": "Merak edilenler",
+    "mainTitle": "Sıkça Sorulan Sorular",
+    "mainDescription": "AquaLingua hakkında merak ettiğiniz soruların cevaplarını burada bulabilirsiniz.",
+    "items": [
+      {
+        "question": "AquaLingua nasıl çalışır?",
+        "answer": "AquaLingua, kelime öğrenme sürecinizi eğlenceli bir oyuna dönüştüren bir uygulamadır. Öğrendiğiniz her kelime ile akvaryumunuzdaki balıkları besler ve yeni balıklar kazanırsınız. Flashcards, quiz, writing ve word matching gibi çeşitli aktivitelerle kelime öğrenmenizi pekiştirebilirsiniz."
+      },
+      {
+        "question": "AquaLingua'yı hangi diller için kullanabilirim?",
+        "answer": "Şu anda İngilizce, Almanca, İspanyolca, ve Türkçe dillerini destekliyoruz. Yakında daha fazla dil eklenecektir."
+      },
+      {
+        "question": "Üyelik ücretleri nedir?",
+        "answer": "AquaLingua'yı 7 gün boyunca ücretsiz olarak deneyebilirsiniz. Deneme süresinden sonra aylık 29.99₺ veya yıllık 249.99₺ (aylık 20.83₺'ye denk gelir) ödeyerek premium üyeliğe geçebilirsiniz."
+      },
+      {
+        "question": "Öğrenme sürecimi nasıl takip edebilirim?",
+        "answer": "Uygulama içindeki istatistikler bölümünden öğrendiğiniz kelime sayısını, bilmediğiniz kelimeleri ve uygulamayı kaç gündür aktif olarak kullandığınızı takip edebilirsiniz. Ayrıca, kelime listelerinizdeki ilerlemenizi de görebilirsiniz."
+      },
+      {
+        "question": "Kendi kelime listemi oluşturabilir miyim?",
+        "answer": "Henüz kelime listesi oluşturma özelliğini desteklemiyoruz. Fakat sonraki versiyonlarda uygulama içinde kendi kelime listelerinizi oluşturup ve bu listelere istediğiniz kelimeleri ekleyebileceksiniz. Ayrıca, mevcut listelerden de kelime seçerek kendi özel listelerinizi oluşturabileceksiniz."
+      },
+      {
+        "question": "Uygulamayı internet bağlantısı olmadan kullanabilir miyim?",
+        "answer": "Evet, önceden indirdiğiniz kelime listelerini internet bağlantısı olmadan da kullanabilirsiniz. Ancak, yeni kelime listeleri indirmek ve ilerlemenizi senkronize etmek için internet bağlantısı gereklidir."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "Tüm hakları saklıdır.",
+    "links": {
+      "privacy": "Gizlilik Politikası",
+      "terms": "Kullanım Şartları",
+      "contact": "İletişim"
+    },
+    "cta": {
+      "title": "Kelime Haznenizi <1>Genişletmeye</1> Başlayın",
+      "description": "Hemen kaydolun ve eğlenceli kelime öğrenme deneyimine başlayın. İlk 7 gün ücretsiz.",
+      "startFree": "Ücretsiz Başla",
+      "watchDemo": "Demo İzle",
+      "newsletterTitle": "Haberdar Olun",
+      "newsletterDescription": "Yeni özellikler ve güncellemelerden haberdar olmak için e-posta listemize kaydolun.",
+      "emailPlaceholder": "E-posta adresiniz",
+      "subscribe": "Abone Ol"
+    },
+    "sections": {
+      "app": {
+        "title": "Uygulama",
+        "features": "Özellikler",
+        "activities": "Aktiviteler",
+        "gamification": "Gamification",
+        "testimonials": "Kullanıcı Deneyimleri",
+        "faq": "Sık Sorulan Sorular"
+      },
+      "support": {
+        "title": "Destek",
+        "faq": "SSS",
+        "contact": "İletişim",
+        "helpCenter": "Yardım Merkezi",
+        "community": "Topluluk"
+      },
+      "legal": {
+        "title": "Yasal",
+        "privacy": "Gizlilik Politikası",
+        "terms": "Kullanım Şartları",
+        "cookies": "Çerez Politikası",
+        "kvkk": "KVKK"
+      },
+      "contact": {
+        "title": "İletişim",
+        "followUs": "Bizi Takip Edin"
+      }
+    }
+  },
+  "common": {
+    "comingSoon": "Çok Yakında",
+    "success": "Başarılı",
+    "error": "Hata",
+    "close": "Kapat",
+    "messages": {
+      "emailSuccess": "Teşekkürler! E-posta adresiniz eklendi.",
+      "emailError": "Bir hata oluştu. Lütfen tekrar deneyin."
+    }
+  },
+  "language": {
+    "tr": "Türkçe",
+    "en": "İngilizce"
+  }
+}

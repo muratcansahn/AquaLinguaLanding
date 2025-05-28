@@ -1,0 +1,216 @@
+{
+  "hero": {
+    "badge": "Aprendizaje divertido de idiomas",
+    "title": "Transforma tu aprendizaje de palabras con <1>AquaLingua</1>",
+    "description": "Con nuestra aplicación, te ofrecemos una experiencia de aprendizaje divertida y adictiva al gamificar tu viaje de aprendizaje de palabras. Cada palabra que aprendes significa una nueva vida en tu acuario.",
+    "emailPrompt": "¿Quieres estar entre los primeros en unirte a AquaLingua? ¡Deja tu dirección de correo electrónico para ser el primero en conocer las sorpresas y el acceso anticipado!",
+    "emailPlaceholder": "Tu dirección de correo electrónico",
+    "joinButton": "Únete a la lista de espera",
+    "privacyNote": "Respetamos tu privacidad. Nunca compartiremos tu información.",
+    "stats": {
+      "wordsLearned": "12 palabras aprendidas",
+      "streak": "Racha de 3 días"
+    }
+  },
+  "navbar": {
+    "home": "Inicio",
+    "features": "Características",
+    "pricing": "Precios",
+    "about": "Acerca de",
+    "login": "Iniciar sesión",
+    "signup": "Registrarse"
+  },
+  "features": {
+    "title": "Características",
+    "subtitle": "Características únicas ofrecidas por AquaLingua",
+    "mainTitle": "La forma más efectiva de aprender palabras",
+    "mainDescription": "Haz que tu aprendizaje de idiomas sea más divertido y eficiente con las características de nuestra aplicación.",
+    "items": [
+      {
+        "title": "Listas de palabras",
+        "description": "Acelera tu aprendizaje con listas de palabras categorizadas adecuadas para tu nivel."
+      },
+      {
+        "title": "Aprendizaje personalizado",
+        "description": "Marca las palabras que conoces y no conoces para una experiencia de aprendizaje personalizada."
+      },
+      {
+        "title": "Seguimiento de progreso",
+        "description": "Realiza un seguimiento de tus estadísticas de palabras y analiza tu proceso de aprendizaje."
+      },
+      {
+        "title": "Actividades diarias",
+        "description": "Actividades diarias y recordatorios para ayudarte a desarrollar hábitos de aprendizaje regulares."
+      }
+    ],
+    "startNow": "Comenzar ahora"
+  },
+  "activity": {
+    "title": "Actividades",
+    "subtitle": "Nuestras actividades de aprendizaje de idiomas",
+    "mainTitle": "Diversas actividades de aprendizaje",
+    "mainDescription": "Aprende palabras de manera más efectiva con diferentes métodos de aprendizaje.",
+    "items": [
+      {
+        "title": "Tarjetas de memoria",
+        "description": "Ve las palabras como tarjetas y desliza hacia la derecha o izquierda para aprender."
+      },
+      {
+        "title": "Cuestionario",
+        "description": "Pon a prueba tus conocimientos con preguntas de opción múltiple y gana puntos."
+      },
+      {
+        "title": "Escritura",
+        "description": "Adivina las letras de las palabras y mejora tus habilidades de escritura."
+      },
+      {
+        "title": "Emparejamiento de palabras",
+        "description": "Empareja palabras y sus significados para fortalecer tu memoria."
+      }
+    ],
+    "new": "Nuevo",
+    "startNow": "Comenzar ahora"
+  },
+  "gamification": {
+    "title": "Gamificación",
+    "subtitle": "Experiencia de aprendizaje gamificada",
+    "mainTitle": "Haz crecer tu <1>Acuario</1>, aprende palabras",
+    "mainDescription": "Convierte el aprendizaje de palabras en un juego divertido con la característica única de acuario de AquaLingua. Gana puntos mientras aprendes, alimenta a tus peces y amplía tu colección.",
+    "stats": [
+      {
+        "title": "2000+",
+        "subtitle": "Palabras para aprender"
+      },
+      {
+        "title": "5+",
+        "subtitle": "Especies de peces (próximamente)"
+      },
+      {
+        "title": "5",
+        "subtitle": "Actividades diarias"
+      },
+      {
+        "title": "3",
+        "subtitle": "Diferentes idiomas"
+      }
+    ],
+    "createAquarium": "Crea tu acuario"
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "subtitle": "Experiencias de nuestros usuarios",
+    "mainTitle": "Experiencias de usuarios",
+    "mainDescription": "Descubre cómo AquaLingua ha transformado tu experiencia de aprendizaje de palabras.",
+    "items": [
+      {
+        "name": "Ayşe Yılmaz",
+        "role": "Estudiante de inglés",
+        "content": "Gracias a la aplicación, aprendí más de 1000 palabras en 3 meses. La función de acuario me anima a estudiar regularmente todos los días."
+      },
+      {
+        "name": "Mehmet Kaya",
+        "role": "Estudiante de alemán",
+        "content": "Recuerdo palabras mucho más fácilmente gracias a las funciones de cuestionario y tarjetas de memoria. El enfoque de gamificación de AquaLingua hace que el aprendizaje sea muy agradable."
+      },
+      {
+        "name": "Zeynep Demir",
+        "role": "Estudiante de español",
+        "content": "Aprendí la ortografía de las palabras mucho más rápido gracias a la actividad de escritura. Practico al menos 15 minutos todos los días para hacer crecer mis peces en el acuario."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Consultas comunes",
+    "mainTitle": "Preguntas frecuentes",
+    "mainDescription": "Encuentra respuestas a preguntas que puedas tener sobre AquaLingua aquí.",
+    "items": [
+      {
+        "question": "¿Cómo funciona AquaLingua?",
+        "answer": "AquaLingua es una aplicación que convierte tu proceso de aprendizaje de palabras en un juego divertido. Con cada palabra que aprendes, alimentas a los peces en tu acuario y ganas nuevos peces. Puedes reforzar tu aprendizaje de palabras con diversas actividades como tarjetas de memoria, cuestionarios, escritura y emparejamiento de palabras."
+      },
+      {
+        "question": "¿Para qué idiomas puedo usar AquaLingua?",
+        "answer": "Actualmente admitimos inglés, alemán, español y turco. Pronto se añadirán más idiomas."
+      },
+      {
+        "question": "¿Cuáles son las tarifas de membresía?",
+        "answer": "Puedes probar AquaLingua gratis durante 7 días. Después del período de prueba, puedes actualizar a la membresía premium pagando 9,99 € al mes o 79,99 € al año (equivalente a 6,67 € al mes)."
+      },
+      {
+        "question": "¿Cómo puedo seguir mi progreso de aprendizaje?",
+        "answer": "Desde la sección de estadísticas en la aplicación, puedes seguir el número de palabras que has aprendido, palabras que no conoces y cuántos días has estado usando activamente la aplicación. También puedes ver tu progreso en tus listas de palabras."
+      },
+      {
+        "question": "¿Puedo crear mi propia lista de palabras?",
+        "answer": "Aún no admitimos la función de creación de listas de palabras. Pero en versiones futuras, podrás crear tus propias listas de palabras en la aplicación y añadir las palabras que quieras a estas listas. También podrás crear tus propias listas personalizadas seleccionando palabras de listas existentes."
+      },
+      {
+        "question": "¿Puedo usar la aplicación sin conexión a Internet?",
+        "answer": "Sí, puedes usar listas de palabras que hayas descargado previamente sin conexión a Internet. Sin embargo, se requiere una conexión a Internet para descargar nuevas listas de palabras y sincronizar tu progreso."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "Todos los derechos reservados.",
+    "links": {
+      "privacy": "Política de privacidad",
+      "terms": "Términos de uso",
+      "contact": "Contacto"
+    },
+    "cta": {
+      "title": "Comienza a <1>expandir</1> tu vocabulario",
+      "description": "Regístrate ahora y comienza la divertida experiencia de aprendizaje de palabras. Primeros 7 días gratis.",
+      "startFree": "Comenzar gratis",
+      "watchDemo": "Ver demo",
+      "newsletterTitle": "Mantente informado",
+      "newsletterDescription": "Suscríbete a nuestra lista de correo electrónico para estar informado sobre nuevas características y actualizaciones.",
+      "emailPlaceholder": "Tu dirección de correo electrónico",
+      "subscribe": "Suscribirse"
+    },
+    "sections": {
+      "app": {
+        "title": "Aplicación",
+        "features": "Características",
+        "activities": "Actividades",
+        "gamification": "Gamificación",
+        "testimonials": "Experiencias de usuarios",
+        "faq": "Preguntas frecuentes"
+      },
+      "support": {
+        "title": "Soporte",
+        "faq": "FAQ",
+        "contact": "Contacto",
+        "helpCenter": "Centro de ayuda",
+        "community": "Comunidad"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacy": "Política de privacidad",
+        "terms": "Términos de uso",
+        "cookies": "Política de cookies",
+        "kvkk": "RGPD"
+      },
+      "contact": {
+        "title": "Contacto",
+        "followUs": "Síguenos"
+      }
+    }
+  },
+  "common": {
+    "comingSoon": "Próximamente",
+    "success": "Exitoso",
+    "error": "Error",
+    "close": "Cerrar",
+    "messages": {
+      "emailSuccess": "¡Gracias! Tu correo electrónico ha sido añadido.",
+      "emailError": "Ha ocurrido un error. Por favor, inténtalo de nuevo."
+    }
+  },
+  "language": {
+    "tr": "Turco",
+    "en": "Inglés",
+    "de": "Alemán",
+    "es": "Español"
+  }
+}

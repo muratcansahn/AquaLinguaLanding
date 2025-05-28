@@ -6,8 +6,10 @@ import FeatureSection from '../components/FeatureSection';
 import ActivitySection from '../components/ActivitySection';
 import GamificationSection from '../components/GamificationSection';
 import TestimonialSection from '../components/TestimonialSection';
+import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
 
+// aquaLingua Ana Sayfa bileşeni
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -16,7 +18,8 @@ const Index = () => {
       <FeatureSection />
       <ActivitySection />
       <GamificationSection />
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
+      <FAQSection />
       <Footer />
     </div>
   );

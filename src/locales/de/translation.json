@@ -1,0 +1,216 @@
+{
+  "hero": {
+    "badge": "Spaßiges Sprachenlernen",
+    "title": "Transformiere dein Wortlernen mit <1>AquaLingua</1>",
+    "description": "Mit unserer App bieten wir dir ein unterhaltsames und süchtig machendes Lernerlebnis, indem wir deine Wortlernreise spielerisch gestalten. Jedes Wort, das du lernst, bedeutet ein neues Leben in deinem Aquarium.",
+    "emailPrompt": "Möchtest du unter den Ersten sein, die AquaLingua beitreten? Hinterlasse deine E-Mail-Adresse, um als Erster von Überraschungen und frühem Zugang zu erfahren!",
+    "emailPlaceholder": "Deine E-Mail-Adresse",
+    "joinButton": "Der Warteliste beitreten",
+    "privacyNote": "Wir respektieren deine Privatsphäre. Wir werden deine Informationen niemals weitergeben.",
+    "stats": {
+      "wordsLearned": "12 Wörter gelernt",
+      "streak": "3-Tage-Serie"
+    }
+  },
+  "navbar": {
+    "home": "Startseite",
+    "features": "Funktionen",
+    "pricing": "Preise",
+    "about": "Über uns",
+    "login": "Anmelden",
+    "signup": "Registrieren"
+  },
+  "features": {
+    "title": "Funktionen",
+    "subtitle": "Einzigartige Funktionen von AquaLingua",
+    "mainTitle": "Der effektivste Weg, Wörter zu lernen",
+    "mainDescription": "Mache dein Sprachenlernen mit den Funktionen unserer App unterhaltsamer und effizienter.",
+    "items": [
+      {
+        "title": "Wörterlisten",
+        "description": "Beschleunige dein Lernen mit kategorisierten Wörterlisten, die deinem Niveau entsprechen."
+      },
+      {
+        "title": "Personalisiertes Lernen",
+        "description": "Markiere Wörter, die du kennst und nicht kennst, für ein personalisiertes Lernerlebnis."
+      },
+      {
+        "title": "Fortschrittsverfolgung",
+        "description": "Verfolge deine Wortstatistiken und analysiere deinen Lernprozess."
+      },
+      {
+        "title": "Tägliche Aktivitäten",
+        "description": "Tägliche Aktivitäten und Erinnerungen, die dir helfen, regelmäßige Lerngewohnheiten zu entwickeln."
+      }
+    ],
+    "startNow": "Jetzt starten"
+  },
+  "activity": {
+    "title": "Aktivitäten",
+    "subtitle": "Unsere Sprachlernaktivitäten",
+    "mainTitle": "Verschiedene Lernaktivitäten",
+    "mainDescription": "Lerne Wörter effektiver mit verschiedenen Lernmethoden.",
+    "items": [
+      {
+        "title": "Karteikarten",
+        "description": "Betrachte Wörter als Karten und wische nach rechts oder links, um zu lernen."
+      },
+      {
+        "title": "Quiz",
+        "description": "Teste dein Wissen mit Multiple-Choice-Fragen und sammle Punkte."
+      },
+      {
+        "title": "Schreiben",
+        "description": "Errate die Buchstaben von Wörtern und verbessere deine Schreibfähigkeiten."
+      },
+      {
+        "title": "Wortabgleich",
+        "description": "Ordne Wörter und ihre Bedeutungen zu, um dein Gedächtnis zu stärken."
+      }
+    ],
+    "new": "Neu",
+    "startNow": "Jetzt starten"
+  },
+  "gamification": {
+    "title": "Gamification",
+    "subtitle": "Spielerisches Lernerlebnis",
+    "mainTitle": "Lass dein <1>Aquarium</1> wachsen, lerne Wörter",
+    "mainDescription": "Verwandle das Wortlernen in ein unterhaltsames Spiel mit der einzigartigen Aquarium-Funktion von AquaLingua. Sammle Punkte beim Lernen, füttere deine Fische und erweitere deine Sammlung.",
+    "stats": [
+      {
+        "title": "2000+",
+        "subtitle": "Lernbare Wörter"
+      },
+      {
+        "title": "5+",
+        "subtitle": "Fischarten (demnächst)"
+      },
+      {
+        "title": "5",
+        "subtitle": "Tägliche Aktivitäten"
+      },
+      {
+        "title": "3",
+        "subtitle": "Verschiedene Sprachen"
+      }
+    ],
+    "createAquarium": "Erstelle dein Aquarium"
+  },
+  "testimonials": {
+    "title": "Erfahrungsberichte",
+    "subtitle": "Erfahrungen unserer Benutzer",
+    "mainTitle": "Benutzererfahrungen",
+    "mainDescription": "Entdecke, wie AquaLingua dein Wortlernerlebnis verändert hat.",
+    "items": [
+      {
+        "name": "Ayşe Yılmaz",
+        "role": "Englisch-Studentin",
+        "content": "Dank der App habe ich in 3 Monaten mehr als 1000 Wörter gelernt. Die Aquarium-Funktion motiviert mich, jeden Tag regelmäßig zu lernen."
+      },
+      {
+        "name": "Mehmet Kaya",
+        "role": "Deutsch-Student",
+        "content": "Ich erinnere mich dank der Quiz- und Karteikarten-Funktionen viel leichter an Wörter. Der Gamification-Ansatz von AquaLingua macht das Lernen sehr angenehm."
+      },
+      {
+        "name": "Zeynep Demir",
+        "role": "Spanisch-Studentin",
+        "content": "Ich habe die Rechtschreibung von Wörtern dank der Schreibaktivität viel schneller gelernt. Ich übe jeden Tag mindestens 15 Minuten, um meine Fische im Aquarium zu züchten."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Häufige Anfragen",
+    "mainTitle": "Häufig gestellte Fragen",
+    "mainDescription": "Hier findest du Antworten auf Fragen, die du möglicherweise zu AquaLingua hast.",
+    "items": [
+      {
+        "question": "Wie funktioniert AquaLingua?",
+        "answer": "AquaLingua ist eine Anwendung, die deinen Wortlernprozess in ein unterhaltsames Spiel verwandelt. Mit jedem Wort, das du lernst, fütterst du die Fische in deinem Aquarium und erhältst neue Fische. Du kannst dein Wortlernen mit verschiedenen Aktivitäten wie Karteikarten, Quiz, Schreiben und Wortabgleich verstärken."
+      },
+      {
+        "question": "Für welche Sprachen kann ich AquaLingua verwenden?",
+        "answer": "Wir unterstützen derzeit Englisch, Deutsch, Spanisch und Türkisch. Weitere Sprachen werden in Kürze hinzugefügt."
+      },
+      {
+        "question": "Wie hoch sind die Mitgliedsbeiträge?",
+        "answer": "Du kannst AquaLingua 7 Tage lang kostenlos testen. Nach der Testphase kannst du durch Zahlung von 9,99 € pro Monat oder 79,99 € pro Jahr (entspricht 6,67 € pro Monat) auf eine Premium-Mitgliedschaft upgraden."
+      },
+      {
+        "question": "Wie kann ich meinen Lernfortschritt verfolgen?",
+        "answer": "Im Statistikbereich der App kannst du die Anzahl der gelernten Wörter, Wörter, die du nicht kennst, und wie viele Tage du die App aktiv genutzt hast, verfolgen. Du kannst auch deinen Fortschritt in deinen Wörterlisten sehen."
+      },
+      {
+        "question": "Kann ich meine eigene Wörterliste erstellen?",
+        "answer": "Wir unterstützen die Funktion zur Erstellung von Wörterlisten noch nicht. Aber in zukünftigen Versionen wirst du in der App deine eigenen Wörterlisten erstellen und die gewünschten Wörter zu diesen Listen hinzufügen können. Du wirst auch eigene benutzerdefinierte Listen erstellen können, indem du Wörter aus bestehenden Listen auswählst."
+      },
+      {
+        "question": "Kann ich die App ohne Internetverbindung nutzen?",
+        "answer": "Ja, du kannst zuvor heruntergeladene Wörterlisten ohne Internetverbindung verwenden. Eine Internetverbindung ist jedoch erforderlich, um neue Wörterlisten herunterzuladen und deinen Fortschritt zu synchronisieren."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "Alle Rechte vorbehalten.",
+    "links": {
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Nutzungsbedingungen",
+      "contact": "Kontakt"
+    },
+    "cta": {
+      "title": "Beginne, deinen Wortschatz zu <1>erweitern</1>",
+      "description": "Melde dich jetzt an und starte das unterhaltsame Wortlernerlebnis. Erste 7 Tage kostenlos.",
+      "startFree": "Kostenlos starten",
+      "watchDemo": "Demo ansehen",
+      "newsletterTitle": "Bleib informiert",
+      "newsletterDescription": "Abonniere unsere E-Mail-Liste, um über neue Funktionen und Updates informiert zu werden.",
+      "emailPlaceholder": "Deine E-Mail-Adresse",
+      "subscribe": "Abonnieren"
+    },
+    "sections": {
+      "app": {
+        "title": "App",
+        "features": "Funktionen",
+        "activities": "Aktivitäten",
+        "gamification": "Gamification",
+        "testimonials": "Benutzererfahrungen",
+        "faq": "Häufig gestellte Fragen"
+      },
+      "support": {
+        "title": "Support",
+        "faq": "FAQ",
+        "contact": "Kontakt",
+        "helpCenter": "Hilfezentrum",
+        "community": "Community"
+      },
+      "legal": {
+        "title": "Rechtliches",
+        "privacy": "Datenschutzrichtlinie",
+        "terms": "Nutzungsbedingungen",
+        "cookies": "Cookie-Richtlinie",
+        "kvkk": "DSGVO"
+      },
+      "contact": {
+        "title": "Kontakt",
+        "followUs": "Folge uns"
+      }
+    }
+  },
+  "common": {
+    "comingSoon": "Demnächst",
+    "success": "Erfolgreich",
+    "error": "Fehler",
+    "close": "Schließen",
+    "messages": {
+      "emailSuccess": "Vielen Dank! Ihre E-Mail wurde hinzugefügt.",
+      "emailError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    }
+  },
+  "language": {
+    "tr": "Türkisch",
+    "en": "Englisch",
+    "de": "Deutsch",
+    "es": "Spanisch"
+  }
+}

@@ -1,62 +1,87 @@
 
 import React from 'react';
-import { BookOpen, Star, ListCheck, Calendar, CheckCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { BookOpen, Star, ListCheck, Calendar, CheckCircle, ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
-const features = [
-  {
-    icon: <BookOpen className="h-10 w-10 text-[#1D9BF0]" />,
-    title: "Kelime Listeleri",
-    description: "Kategorilere ayrılmış, seviyenize uygun kelime listeleri ile öğrenmenizi hızlandırın."
-  },
-  {
-    icon: <Star className="h-10 w-10 text-[#FF8A3C]" />,
-    title: "Kişiselleştirilmiş Öğrenme",
-    description: "Bildiğiniz ve bilmediğiniz kelimeleri işaretleyerek size özel öğrenme deneyimi."
-  },
-  {
-    icon: <ListCheck className="h-10 w-10 text-[#1D9BF0]" />,
-    title: "İlerleme Takibi",
-    description: "Kelime istatistiklerinizi takip edin ve öğrenme sürecinizi analiz edin."
-  },
-  {
-    icon: <Calendar className="h-10 w-10 text-[#FF8A3C]" />,
-    title: "Günlük Aktiviteler",
-    description: "Düzenli öğrenme alışkanlığı kazanmak için günlük aktiviteler ve hatırlatmalar."
-  }
+const featureIcons = [
+  { icon: <BookOpen className="h-10 w-10" />, color: "from-blue-500 to-cyan-400" },
+  { icon: <Star className="h-10 w-10" />, color: "from-orange-400 to-amber-300" },
+  { icon: <ListCheck className="h-10 w-10" />, color: "from-green-500 to-emerald-400" },
+  { icon: <Calendar className="h-10 w-10" />, color: "from-purple-500 to-violet-400" }
 ];
 
 const FeatureSection = () => {
+  const { t } = useTranslation();
+  
+  // Sabit özellik listesi oluşturuyoruz
+  const features = [
+    {
+      title: t('features.items.0.title'),
+      description: t('features.items.0.description')
+    },
+    {
+      title: t('features.items.1.title'),
+      description: t('features.items.1.description')
+    },
+    {
+      title: t('features.items.2.title'),
+      description: t('features.items.2.description')
+    },
+    {
+      title: t('features.items.3.title'),
+      description: t('features.items.3.description')
+    }
+  ];
   return (
-    <section className="py-16 md:py-24 px-6 md:px-10 bg-gradient-to-b from-white to-gray-50" id="features">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Kelime Öğrenmenin En Etkili Yolu
+    <section className="py-16 md:py-24 px-6 md:px-10 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden" id="features">
+      {/* Dekoratif arka plan elementleri */}
+      <div className="absolute -z-10 top-20 right-20 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute -z-10 bottom-20 left-20 w-64 h-64 bg-orange-100 rounded-full blur-3xl opacity-30"></div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-2xl mx-auto mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700">
+            {t('features.mainTitle')}
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            Uygulamamızın özellikleri ile dil öğreniminizi daha eğlenceli ve verimli hale getirin.
+            {t('features.mainDescription')}
           </p>
-        </div>
+        </motion.div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="border-none shadow-md bg-white hover:shadow-lg transition-shadow duration-300">
-              <CardHeader className="pb-2">
-                <div className="mb-4 p-2 rounded-lg inline-flex bg-gradient-to-br from-sky-50 to-blue-50">
-                  {feature.icon}
-                </div>
-                <CardTitle className="text-xl">{feature.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 text-base">
-                  {feature.description}
-                </CardDescription>
-                <div className="mt-4 flex items-center text-sm text-[#1D9BF0]">
-                  <CheckCircle className="h-4 w-4 mr-1" /> Hemen Başla
-                </div>
-              </CardContent>
-            </Card>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card className="border-none shadow-lg bg-white hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden h-full">
+                <CardHeader className="pb-2">
+                  <div className={`mb-4 p-3 rounded-xl bg-gradient-to-r ${featureIcons[index].color} flex justify-center items-center w-14 h-14 text-white shadow-md`}>
+                    {featureIcons[index].icon}
+                  </div>
+                  <CardTitle className="text-xl font-bold">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-gray-600 text-base">
+                    {feature.description}
+                  </CardDescription>
+                  <div className="mt-4 text-sm italic text-gray-500">
+                    {t('common.comingSoon')}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>
