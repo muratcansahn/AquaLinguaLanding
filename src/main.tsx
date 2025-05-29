@@ -8,16 +8,16 @@ import './lib/i18n'
 // Üretim ortamında gereksiz yeniden render'ları önlemek için
 
 // Web Vitals ölçümü için
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+
 const reportWebVitals = () => {
   if (import.meta.env.PROD) {
     // Yalnızca üretim ortamında Web Vitals'ı ölç
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(console.log); // Cumulative Layout Shift
-      getFID(console.log); // First Input Delay
-      getFCP(console.log); // First Contentful Paint
-      getLCP(console.log); // Largest Contentful Paint
-      getTTFB(console.log); // Time to First Byte
-    });
+    onCLS(console.log); // Cumulative Layout Shift
+    onINP(console.log); // Interaction to Next Paint (FID yerine)
+    onFCP(console.log); // First Contentful Paint
+    onLCP(console.log); // Largest Contentful Paint
+    onTTFB(console.log); // Time to First Byte
   }
 };
 
