@@ -1,8 +1,8 @@
 
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
-import { Star, BookOpen, ArrowRight, Users, Sparkles, X, Check } from 'lucide-react';
+import { Star, ArrowRight, Sparkles, X, Check } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { motion, AnimatePresence } from "framer-motion";
 import { Trans } from 'react-i18next';
@@ -20,42 +20,69 @@ const HeroSection = () => {
   const getPhoneImage = () => {
     const currentLang = i18n.language;
     switch(currentLang) {
-      case 'tr': return "/tr.png";
-      case 'de': return "/al.png";
-      case 'es': return "/es.png";
-      default: return "/example.jpg"; // İngilizce için örnek görsel
+      case 'tr': return "/tr.webp";
+      case 'de': return "/al.webp";
+      case 'es': return "/es.webp";
+      default: return "/example.webp"; // İngilizce için örnek görsel
     }
   };
   
   // İngilizce dil seçildiğinde gösterilecek içerik
   const renderEnglishContent = () => {
     return (
-      <div className="relative flex justify-center items-center py-8">
-        <div className="relative flex items-end justify-center" style={{ height: '600px', width: '600px' }}>
+      <div className="relative flex justify-center items-center py-4 md:py-8">
+        <div className="relative flex items-end justify-center w-full max-w-[600px] h-[400px] md:h-[600px]">
           {/* Almanca görsel - sola eğimli */}
-          <div className="absolute bottom-20" style={{ transform: 'rotate(-15deg)', transformOrigin: 'bottom center', left: '70px' }}>
+          <div className="absolute bottom-10 md:bottom-20" style={{ transform: 'rotate(-15deg)', transformOrigin: 'bottom center', left: '10%' }}>
             <img 
-              src="/al.png" 
+              src="/al.webp" 
               alt="Almanca uygulama" 
-              className="h-[500px] w-auto object-contain"
+              loading="lazy"
+              width="250"
+              height="500"
+              className="h-[300px] md:h-[500px] w-auto object-contain"
+              onError={(e) => {
+                // Fallback olarak PNG dosyasını dene
+                const target = e.target as HTMLImageElement;
+                target.onerror = null; // Sonsuz döngüyü önle
+                target.src = "/al.png";
+              }}
             />
           </div>
           
           {/* Türkçe görsel - ortada */}
-          <div className="absolute bottom-20" style={{ zIndex: 20 }}>
+          <div className="absolute bottom-10 md:bottom-20" style={{ zIndex: 20 }}>
             <img 
-              src="/tr.png" 
+              src="/tr.webp" 
               alt="Türkçe uygulama" 
-              className="h-[520px] w-auto object-contain"
+              loading="lazy"
+              width="260"
+              height="520"
+              className="h-[320px] md:h-[520px] w-auto object-contain"
+              onError={(e) => {
+                // Fallback olarak PNG dosyasını dene
+                const target = e.target as HTMLImageElement;
+                target.onerror = null; // Sonsuz döngüyü önle
+                target.src = "/tr.png";
+              }}
             />
           </div>
           
           {/* İspanyolca görsel - sağa eğimli */}
-          <div className="absolute bottom-20" style={{ transform: 'rotate(15deg)', transformOrigin: 'bottom center', right: '70px' }}>
+          <div className="absolute bottom-10 md:bottom-20" style={{ transform: 'rotate(15deg)', transformOrigin: 'bottom center', right: '10%' }}>
             <img 
-              src="/es.png" 
+              src="/es.webp" 
               alt="İspanyolca uygulama" 
-              className="h-[500px] w-auto object-contain"
+              loading="lazy"
+              width="250"
+              height="500"
+              className="h-[300px] md:h-[500px] w-auto object-contain"
+              onError={(e) => {
+                // Fallback olarak PNG dosyasını dene
+                const target = e.target as HTMLImageElement;
+                target.onerror = null; // Sonsuz döngüyü önle
+                target.src = "/es.png";
+              }}
             />
           </div>
         </div>
@@ -63,12 +90,12 @@ const HeroSection = () => {
     );
   };
   return (
-    <section className="pt-10 pb-12 md:pt-12 md:pb-16 px-6 md:px-10 overflow-hidden relative" id="hero">
-      {/* Arka plan dekoratif elementleri */}
-      <div className="absolute -z-10 top-0 right-0 w-1/3 h-1/3 bg-gradient-to-b from-[#1D9BF0]/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute -z-10 bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-t from-[#FF8A3C]/10 to-transparent rounded-full blur-3xl"></div>
+    <section className="pt-8 pb-10 md:pt-12 md:pb-16 px-4 sm:px-6 md:px-10 overflow-hidden relative" id="hero">
+      {/* Arka plan dekoratif elementleri - daha hafif blur efektleri */}
+      <div className="absolute -z-10 top-0 right-0 w-1/3 h-1/3 bg-gradient-to-b from-[#1D9BF0]/10 to-transparent rounded-full blur-2xl"></div>
+      <div className="absolute -z-10 bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-t from-[#FF8A3C]/10 to-transparent rounded-full blur-2xl"></div>
       
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -80,13 +107,13 @@ const HeroSection = () => {
             <span className="font-medium">{t('hero.badge')}</span>
           </Badge>
           
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700">
             <Trans i18nKey="hero.title">
               Kelime Öğrenmeyi <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FF8A3C] to-[#FF6B1A]">AquaLingua</span> ile Dönüştürün
             </Trans>
           </h1>
           
-          <p className="text-sm text-gray-600 md:text-base max-w-md">
+          <p className="text-sm sm:text-base text-gray-600 max-w-md">
             {t('hero.description')}
           </p>
           
@@ -97,15 +124,15 @@ const HeroSection = () => {
             className="flex flex-col gap-3 mt-8"
           >
             <span className="text-sm md:text-base text-gray-700 font-medium pb-1">{t('hero.emailPrompt')}</span>
-            <form className="flex flex-col sm:flex-row gap-3" onSubmit={(e) => {
+            <form className="flex flex-col sm:flex-row gap-3" onSubmit={async (e) => {
                 e.preventDefault();
                 if (!email || isSubmitting) return;
                 
                 setIsSubmitting(true);
                 
                 try {
-                  // Google Apps Script'e doğrudan istek gönderme
-                  fetch("https://script.google.com/macros/s/AKfycbzG8UMsj4KvfussalEdABXA13ImMUaK5QUAtYw_1OJSrjp7GLbD8aocfunt9SETHvKs/exec", {
+                  // Google Apps Script'e doğrudan istek gönderme - async/await kullanımı
+                  await fetch("https://script.google.com/macros/s/AKfycbzG8UMsj4KvfussalEdABXA13ImMUaK5QUAtYw_1OJSrjp7GLbD8aocfunt9SETHvKs/exec", {
                     method: "POST",
                     mode: "no-cors", // Bu önemli!
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -147,10 +174,10 @@ const HeroSection = () => {
               <p className="text-base text-gray-700 font-medium mb-3">{t('common.comingSoon')}</p>
               <div className="flex flex-wrap gap-3">
                 <a href="#" className="transform hover:scale-105 transition-transform duration-300">
-                  <img src="/app-store-badge.png" alt="App Store'dan İndir" className="h-10" />
+                  <img src="/app-store-badge.webp" alt="App Store'dan İndir" width="120" height="40" loading="lazy" className="h-10" />
                 </a>
                 <a href="#" className="transform hover:scale-105 transition-transform duration-300">
-                  <img src="/google-play-badge.png" alt="Google Play'den İndir" className="h-10" />
+                  <img src="/google-play-badge.webp" alt="Google Play'den İndir" width="135" height="40" loading="lazy" className="h-10" />
                 </a>
               </div>
             </div>
@@ -163,11 +190,11 @@ const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="relative"
         >
-          <div className="absolute -z-10 w-full h-full blur-3xl opacity-20 bg-gradient-to-br from-[#7DD3F9] to-[#1D9BF0] rounded-full"></div>
+          <div className="absolute -z-10 w-full h-full blur-2xl opacity-20 bg-gradient-to-br from-[#7DD3F9] to-[#1D9BF0] rounded-full"></div>
           <div className="flex items-center justify-center">
-            {/* Dekoratif elementler */}
-            <div className="absolute -z-10 top-0 right-0 w-20 h-20 bg-[#FF8A3C]/10 rounded-full blur-xl"></div>
-            <div className="absolute -z-10 bottom-0 left-0 w-32 h-32 bg-[#1D9BF0]/10 rounded-full blur-xl"></div>
+            {/* Dekoratif elementler - daha hafif blur */}
+            <div className="absolute -z-10 top-0 right-0 w-20 h-20 bg-[#FF8A3C]/10 rounded-full blur-lg"></div>
+            <div className="absolute -z-10 bottom-0 left-0 w-32 h-32 bg-[#1D9BF0]/10 rounded-full blur-lg"></div>
             
             {/* Uygulama görselleri */}
             <div className="relative">
@@ -177,56 +204,73 @@ const HeroSection = () => {
                 <img
                   src={getPhoneImage()}
                   alt="Uygulama görseli"
-                  className="relative z-10 max-w-[300px] w-full object-contain mx-auto mb-20"
+                  loading="lazy"
+                  width="300"
+                  height="600"
+                  className="relative z-10 max-w-[300px] w-full object-contain mx-auto mb-10 md:mb-20"
                   style={{
                     filter: 'drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.15))',
                     borderRadius: '0px',
                     height: 'auto'
+                  }}
+                  onError={(e) => {
+                    // Fallback olarak PNG dosyasını dene
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null; // Sonsuz döngüyü önle
+                    
+                    // Dile göre fallback görseli belirle
+                    const lang = i18n.language;
+                    switch(lang) {
+                      case 'tr': target.src = "/tr.png"; break;
+                      case 'de': target.src = "/al.png"; break;
+                      case 'es': target.src = "/es.png"; break;
+                      default: target.src = "/example.jpg";
+                    }
                   }}
                 />
               )}
               
               {/* Floating elements */}
               <motion.div 
-                className="absolute top-8 -left-4 bg-white p-2 rounded-lg shadow-lg z-20 flex items-center gap-1.5"
-                animate={{ y: [-5, 5, -5] }}
+                className="absolute top-4 md:top-8 -left-2 md:-left-4 bg-white p-2 rounded-lg shadow-lg z-20 flex items-center gap-1.5"
+                animate={{ y: [-3, 3, -3] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
               >
-                <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
-                <span className="text-xs font-medium">{t('hero.stats.wordsLearned')}</span>
+                <Star className="h-3 w-3 md:h-4 md:w-4 text-yellow-500 fill-yellow-500" />
+                <span className="text-[10px] md:text-xs font-medium">{t('hero.stats.wordsLearned')}</span>
               </motion.div>
               
               <motion.div 
-                className="absolute bottom-16 -right-4 bg-white p-2 rounded-lg shadow-lg z-20 flex items-center gap-1.5"
-                animate={{ y: [-5, 5, -5] }}
+                className="absolute bottom-10 md:bottom-16 -right-2 md:-right-4 bg-white p-2 rounded-lg shadow-lg z-20 flex items-center gap-1.5"
+                animate={{ y: [-3, 3, -3] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: 1 }}
               >
-                <div className="h-4 w-4 rounded-full bg-green-500 flex items-center justify-center">
-                  <ArrowRight className="h-2.5 w-2.5 text-white" />
+                <div className="h-3 w-3 md:h-4 md:w-4 rounded-full bg-green-500 flex items-center justify-center">
+                  <ArrowRight className="h-2 w-2 md:h-2.5 md:w-2.5 text-white" />
                 </div>
-                <span className="text-xs font-medium">{t('hero.stats.streak')}</span>
+                <span className="text-[10px] md:text-xs font-medium">{t('hero.stats.streak')}</span>
               </motion.div>
             </div>
           </div>
         </motion.div>
         
-        {/* Animasyonlu Modal */}
+        {/* Animasyonlu Modal - Daha hafif animasyon */}
         <AnimatePresence>
           {showModal && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
               className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4"
               onClick={() => setShowModal(false)}
             >
               <motion.div
-                initial={{ scale: 0.9, y: 20 }}
+                initial={{ scale: 0.95, y: 10 }}
                 animate={{ scale: 1, y: 0 }}
-                exit={{ scale: 0.9, y: 20 }}
-                transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                className="bg-white rounded-xl p-6 shadow-2xl max-w-md w-full relative"
+                exit={{ scale: 0.95, y: 10 }}
+                transition={{ type: "spring", damping: 20, stiffness: 250 }}
+                className="bg-white rounded-xl p-4 md:p-6 shadow-xl max-w-md w-full relative"
                 onClick={(e) => e.stopPropagation()}
               >
                 <button 

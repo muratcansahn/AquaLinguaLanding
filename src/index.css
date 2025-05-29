@@ -1,6 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+/* Font yükleme işlemini index.html'e taşıdık (preconnect ve preload ile) */
 
 @tailwind base;
 @tailwind components;
@@ -106,9 +105,12 @@
     background-repeat: repeat;
     background-size: 200px;
     background-attachment: fixed;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
+/* Gradient sınıfları */
 .hero-gradient {
   background: linear-gradient(135deg, #1E88E5 0%, #0D47A1 100%);
 }
@@ -117,27 +119,46 @@
   background: linear-gradient(180deg, #1E88E5 0%, #0D47A1 100%);
 }
 
+/* Kart stilleri - daha hafif gölge ve blur efektleri */
 .ocean-card {
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
+/* Optimize edilmiş animasyonlar - hardware acceleration */
 .feature-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform, box-shadow;
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 }
 
 .activity-card {
   border-radius: 12px;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease;
+  will-change: transform;
 }
 
 .activity-card:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
+}
+
+/* Animasyonlar için performans optimizasyonu */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .feature-card:hover,
+  .activity-card:hover {
+    transform: none;
+  }
 }

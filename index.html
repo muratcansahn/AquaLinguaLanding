@@ -8,7 +8,27 @@
     <meta name="author" content="WordSpark" />
     <meta name="keywords" content="dil öğrenimi, kelime havuzu, yabancı dil, kelime listesi, dil eğitimi, WordSpark" />
     <link rel="icon" href="/logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" />
+    </noscript>
+    
+    <!-- Preload kritik kaynaklar -->
+    <link rel="preload" href="/tr.webp" as="image" />
+    <link rel="preload" href="/logo.png" as="image" />
+    
+    <!-- Performans için meta etiketleri -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#1E88E5" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+    <!-- Open Graph ve Twitter meta etiketleri -->
     <meta property="og:title" content="WordSpark Aquarium - Yabancı Dil Öğrenimini Kolaylaştıran Kelime Havuzu" />
     <meta property="og:description" content="WordSpark Aquarium ile yabancı dil öğrenimini hızlandırın. Kelime listeleri oluşturun, kelimeleri kategorize edin ve öğrenme sürecinizi takip edin." />
     <meta property="og:type" content="website" />
@@ -21,12 +41,15 @@
     <meta name="twitter:title" content="WordSpark Aquarium - Yabancı Dil Öğrenimi" />
     <meta name="twitter:description" content="Yabancı dil öğrenimini kolaylaştıran kelime havuzu uygulaması" />
     <meta name="twitter:image" content="/logo.png" />
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://cdn.gpteng.co" />
   </head>
 
   <body>
     <div id="root"></div>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module" defer></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
