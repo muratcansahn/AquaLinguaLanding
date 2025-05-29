@@ -30,63 +30,131 @@ const HeroSection = () => {
   
   // İngilizce dil seçildiğinde gösterilecek içerik
   const renderEnglishContent = () => {
+    // Mobil cihazlarda farklı düzen kullanacağız
+    const isMobile = window.innerWidth < 768;
+    
     return (
       <div className="relative flex justify-center items-center py-4 md:py-8">
-        <div className="relative flex items-end justify-center w-full max-w-[600px] h-[400px] md:h-[600px]">
-          {/* Almanca görsel - sola eğimli */}
-          <div className="absolute bottom-10 md:bottom-20" style={{ transform: 'rotate(-15deg)', transformOrigin: 'bottom center', left: '10%' }}>
-            <img 
-              src="/al.webp" 
-              alt="Almanca uygulama" 
-              loading="lazy"
-              width="250"
-              height="500"
-              className="h-[300px] md:h-[500px] w-auto object-contain"
-              onError={(e) => {
-                // Fallback olarak PNG dosyasını dene
-                const target = e.target as HTMLImageElement;
-                target.onerror = null; // Sonsuz döngüyü önle
-                target.src = "/al.png";
-              }}
-            />
+        {isMobile ? (
+          // Mobil görünüm - tek telefon göster ve kaydırılabilir yap
+          <div className="relative w-full overflow-x-auto pb-4 pt-2">
+            <div className="flex gap-4 px-4 snap-x snap-mandatory overflow-x-auto scrollbar-hide">
+              {/* Almanca görsel */}
+              <div className="snap-center flex-shrink-0 flex justify-center">
+                <img 
+                  src="/al.webp" 
+                  alt="Almanca uygulama" 
+                  loading="lazy"
+                  width="200"
+                  height="400"
+                  className="h-[280px] w-auto object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = "/al.png";
+                  }}
+                />
+              </div>
+              
+              {/* Türkçe görsel */}
+              <div className="snap-center flex-shrink-0 flex justify-center">
+                <img 
+                  src="/tr.webp" 
+                  alt="Türkçe uygulama" 
+                  loading="lazy"
+                  width="200"
+                  height="400"
+                  className="h-[280px] w-auto object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = "/tr.png";
+                  }}
+                />
+              </div>
+              
+              {/* İspanyolca görsel */}
+              <div className="snap-center flex-shrink-0 flex justify-center">
+                <img 
+                  src="/es.webp" 
+                  alt="İspanyolca uygulama" 
+                  loading="lazy"
+                  width="200"
+                  height="400"
+                  className="h-[280px] w-auto object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = "/es.png";
+                  }}
+                />
+              </div>
+            </div>
+            {/* Kaydırma göstergesi */}
+            <div className="flex justify-center gap-1 mt-3">
+              <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+            </div>
           </div>
-          
-          {/* Türkçe görsel - ortada */}
-          <div className="absolute bottom-10 md:bottom-20" style={{ zIndex: 20 }}>
-            <img 
-              src="/tr.webp" 
-              alt="Türkçe uygulama" 
-              loading="lazy"
-              width="260"
-              height="520"
-              className="h-[320px] md:h-[520px] w-auto object-contain"
-              onError={(e) => {
-                // Fallback olarak PNG dosyasını dene
-                const target = e.target as HTMLImageElement;
-                target.onerror = null; // Sonsuz döngüyü önle
-                target.src = "/tr.png";
-              }}
-            />
+        ) : (
+          // Masaüstü görünüm - üç telefonu yan yana göster
+          <div className="relative flex items-end justify-center w-full max-w-[600px] h-[400px] md:h-[600px]">
+            {/* Almanca görsel - sola eğimli */}
+            <div className="absolute bottom-10 md:bottom-20" style={{ transform: 'rotate(-15deg)', transformOrigin: 'bottom center', left: '10%' }}>
+              <img 
+                src="/al.webp" 
+                alt="Almanca uygulama" 
+                loading="lazy"
+                width="250"
+                height="500"
+                className="h-[300px] md:h-[500px] w-auto object-contain"
+                onError={(e) => {
+                  // Fallback olarak PNG dosyasını dene
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null; // Sonsuz döngüyü önle
+                  target.src = "/al.png";
+                }}
+              />
+            </div>
+            
+            {/* Türkçe görsel - ortada */}
+            <div className="absolute bottom-10 md:bottom-20" style={{ zIndex: 20 }}>
+              <img 
+                src="/tr.webp" 
+                alt="Türkçe uygulama" 
+                loading="lazy"
+                width="260"
+                height="520"
+                className="h-[320px] md:h-[520px] w-auto object-contain"
+                onError={(e) => {
+                  // Fallback olarak PNG dosyasını dene
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null; // Sonsuz döngüyü önle
+                  target.src = "/tr.png";
+                }}
+              />
+            </div>
+            
+            {/* İspanyolca görsel - sağa eğimli */}
+            <div className="absolute bottom-10 md:bottom-20" style={{ transform: 'rotate(15deg)', transformOrigin: 'bottom center', right: '10%' }}>
+              <img 
+                src="/es.webp" 
+                alt="İspanyolca uygulama" 
+                loading="lazy"
+                width="250"
+                height="500"
+                className="h-[300px] md:h-[500px] w-auto object-contain"
+                onError={(e) => {
+                  // Fallback olarak PNG dosyasını dene
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null; // Sonsuz döngüyü önle
+                  target.src = "/es.png";
+                }}
+              />
+            </div>
           </div>
-          
-          {/* İspanyolca görsel - sağa eğimli */}
-          <div className="absolute bottom-10 md:bottom-20" style={{ transform: 'rotate(15deg)', transformOrigin: 'bottom center', right: '10%' }}>
-            <img 
-              src="/es.webp" 
-              alt="İspanyolca uygulama" 
-              loading="lazy"
-              width="250"
-              height="500"
-              className="h-[300px] md:h-[500px] w-auto object-contain"
-              onError={(e) => {
-                // Fallback olarak PNG dosyasını dene
-                const target = e.target as HTMLImageElement;
-                target.onerror = null; // Sonsuz döngüyü önle
-                target.src = "/es.png";
-              }}
-            />
-          </div>
-        </div>
+        )}
       </div>
     );
   };
