@@ -3,11 +3,12 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent } from "@/components/ui/card";
 import { Fish, Trophy, Calendar, Languages } from 'lucide-react';
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Trans } from 'react-i18next';
 
 const GamificationSection = () => {
   const { t } = useTranslation();
+  const prefersReducedMotion = useReducedMotion();
   return (
     <section className="py-12 md:py-20 px-4 sm:px-6 md:px-10 text-white relative overflow-hidden text-center" id="gamification" style={{ background: 'linear-gradient(180deg, #1E88E5 0%, #0D47A1 100%)' }}>
       {/* Dekoratif okyanus arka plan elementleri - daha düşük kalitede arka plan */}
@@ -29,10 +30,10 @@ const GamificationSection = () => {
       <div className="max-w-5xl mx-auto relative z-10">
         <motion.div 
           className="space-y-6 md:space-y-8 flex flex-col items-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.5 }}
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
             <Trans i18nKey="gamification.mainTitle">
@@ -48,10 +49,10 @@ const GamificationSection = () => {
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 w-full items-center my-6 md:my-8">
             {/* Balık görseli - Sol taraf */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={prefersReducedMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.5, delay: 0.1 }}
               className="relative order-2 md:order-1"
             >
               <div className="absolute -z-10 inset-0 bg-gradient-to-br from-blue-400/20 to-cyan-300/20 rounded-3xl blur-lg"></div>
@@ -75,10 +76,10 @@ const GamificationSection = () => {
               ].map((statIcon, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 10 }}
+                initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: i * 0.05 }}
+                transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.3, delay: i * 0.05 }}
                 className="w-full"
               >
                 <Card className="bg-white border-white/40 backdrop-blur-md shadow-md hover:shadow-lg transition-all duration-200 overflow-hidden">
@@ -101,10 +102,10 @@ const GamificationSection = () => {
             
           <motion.div
             className="mt-6 md:mt-8"
-            initial={{ opacity: 0, y: 10 }}
+            initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: 0.2 }}
+            transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.3, delay: 0.2 }}
           >
             <div className="flex flex-col items-center">
               <p className="text-white text-base md:text-lg mb-3 md:mb-4">Coming Soon</p>

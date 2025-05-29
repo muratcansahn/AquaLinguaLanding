@@ -9,7 +9,7 @@ import { ImShuffle } from 'react-icons/im';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 const activityIcons = [
   {
@@ -32,6 +32,7 @@ const activityIcons = [
 
 const ActivitySection = () => {
   const { t } = useTranslation();
+  const prefersReducedMotion = useReducedMotion();
   
   // Aktivite listesini oluşturuyoruz
   const activities = [
@@ -60,10 +61,10 @@ const ActivitySection = () => {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700">
@@ -78,10 +79,10 @@ const ActivitySection = () => {
           {activities.map((activity, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.5, delay: index * 0.1 }}
             >
               <Card className="overflow-hidden border-none shadow-xl rounded-xl hover:shadow-2xl transition-all duration-300">
                 <div className="flex flex-col md:flex-row">

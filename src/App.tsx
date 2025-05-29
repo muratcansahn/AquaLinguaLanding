@@ -54,11 +54,16 @@ const TitleUpdater = () => {
 };
 
 // Yükleme göstergesi bileşeni
-const LoadingFallback = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="w-16 h-16 border-4 border-blue-400 border-t-blue-600 rounded-full animate-spin"></div>
-  </div>
-);
+const LoadingFallback = () => {
+  // Mobil cihazlarda animasyonu kaldır
+  const isMobile = window.innerWidth < 768;
+  
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className={`w-16 h-16 border-4 border-blue-400 border-t-blue-600 rounded-full ${isMobile ? '' : 'animate-spin'}`}></div>
+    </div>
+  );
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>

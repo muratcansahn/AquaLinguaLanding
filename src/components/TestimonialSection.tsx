@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Star, Quote } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 // Sabit yıldız sayıları ve baş harfler
 const testimonialDetails = [
@@ -15,6 +15,7 @@ const testimonialDetails = [
 
 const TestimonialSection = () => {
   const { t } = useTranslation();
+  const prefersReducedMotion = useReducedMotion();
   
   // Çeviri dosyasından kullanıcı yorumlarını alıyoruz
   const testimonials = [
@@ -42,10 +43,10 @@ const TestimonialSection = () => {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700">
@@ -60,10 +61,10 @@ const TestimonialSection = () => {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.5, delay: index * 0.1 }}
             >
               <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl overflow-hidden h-full">
                 <CardHeader className="pb-2 pt-6">

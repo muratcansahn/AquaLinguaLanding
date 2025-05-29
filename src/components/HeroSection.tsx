@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
 import { Star, ArrowRight, Sparkles, X, Check } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Trans } from 'react-i18next';
 
 
@@ -15,6 +15,7 @@ const HeroSection = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalType, setModalType] = useState<'success' | 'error'>('success');
   const [modalMessage, setModalMessage] = useState('');
+  const prefersReducedMotion = useReducedMotion();
   
   // Dile göre telefon görselini belirleme
   const getPhoneImage = () => {
@@ -97,9 +98,9 @@ const HeroSection = () => {
       
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.5 }}
           className="space-y-6"
         >
           <Badge variant="outline" className="px-4 py-1.5 gap-1.5 bg-gradient-to-r from-orange-100 to-amber-100 text-orange-700 hover:bg-orange-100 border-orange-200 shadow-sm">
@@ -118,9 +119,9 @@ const HeroSection = () => {
           </p>
           
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.5, delay: 0.2 }}
             className="flex flex-col gap-3 mt-8"
           >
             <span className="text-sm md:text-base text-gray-700 font-medium pb-1">{t('hero.emailPrompt')}</span>
@@ -185,9 +186,9 @@ const HeroSection = () => {
         </motion.div>
         
         <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={prefersReducedMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.5, delay: 0.1 }}
           className="relative"
         >
           <div className="absolute -z-10 w-full h-full blur-2xl opacity-20 bg-gradient-to-br from-[#7DD3F9] to-[#1D9BF0] rounded-full"></div>
