@@ -202,6 +202,7 @@
     "success": "Success",
     "error": "Error",
     "close": "Close",
+    "backToHome": "Back to Home",
     "messages": {
       "emailSuccess": "Thank you! Your email has been added.",
       "emailError": "An error occurred. Please try again."

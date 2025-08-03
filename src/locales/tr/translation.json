@@ -202,6 +202,7 @@
     "success": "Başarılı",
     "error": "Hata",
     "close": "Kapat",
+    "backToHome": "Ana Sayfaya Dön",
     "messages": {
       "emailSuccess": "Teşekkürler! E-posta adresiniz eklendi.",
       "emailError": "Bir hata oluştu. Lütfen tekrar deneyin."
@@ -212,5 +213,70 @@
     "en": "İngilizce",
     "de": "Almanca",
     "es": "İspanyolca"
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "lastUpdated": "Son Güncelleme",
+    "lastUpdatedDate": "15 Aralık 2024",
+    "sections": {
+      "introduction": {
+        "title": "Giriş",
+        "content": "AquaLingua olarak, kullanıcılarımızın gizliliğine saygı duyuyoruz. Bu gizlilik politikası, uygulamamızı kullanırken toplanan bilgilerin nasıl kullanıldığını ve korunduğunu açıklar."
+      },
+      "dataCollection": {
+        "title": "Toplanan Veriler",
+        "content": "Uygulamamızı kullanırken aşağıdaki türde veriler toplayabiliriz:",
+        "items": {
+          "personalInfo": "Kişisel bilgiler (ad, e-posta adresi)",
+          "usageData": "Kullanım verileri (öğrenilen kelimeler, aktivite süreleri)",
+          "deviceInfo": "Cihaz bilgileri (işletim sistemi, tarayıcı türü)",
+          "cookies": "Çerezler ve benzer teknolojiler"
+        }
+      },
+      "dataUsage": {
+        "title": "Verilerin Kullanımı",
+        "content": "Topladığımız verileri aşağıdaki amaçlarla kullanırız:",
+        "items": {
+          "serviceProvision": "Hizmetlerimizi sağlamak ve iyileştirmek",
+          "improvement": "Uygulama performansını ve kullanıcı deneyimini geliştirmek",
+          "communication": "Sizinle iletişim kurmak ve güncellemeler hakkında bilgilendirmek",
+          "security": "Güvenlik ve dolandırıcılık önleme"
+        }
+      },
+      "dataSharing": {
+        "title": "Veri Paylaşımı",
+        "content": "Kişisel verilerinizi üçüncü taraflarla paylaşmayız, ancak yasal zorunluluklar veya hizmet sağlayıcılarımızla sınırlı paylaşımlar yapabiliriz."
+      },
+      "dataSecurity": {
+        "title": "Veri Güvenliği",
+        "content": "Verilerinizi korumak için endüstri standardı güvenlik önlemleri kullanırız. Verileriniz şifrelenmiş olarak saklanır ve güvenli sunucularda tutulur."
+      },
+      "userRights": {
+        "title": "Kullanıcı Hakları",
+        "content": "Verilerinizle ilgili aşağıdaki haklara sahipsiniz:",
+        "items": {
+          "access": "Verilerinize erişim talep etme",
+          "correction": "Yanlış verileri düzeltme",
+          "deletion": "Verilerinizi silme",
+          "portability": "Verilerinizi taşınabilir formatta alma",
+          "objection": "Veri işlemeye itiraz etme"
+        }
+      },
+      "cookies": {
+        "title": "Çerezler",
+        "content": "Uygulamamız, deneyiminizi iyileştirmek için çerezler kullanır. Bu çerezler, tercihlerinizi hatırlamak ve analitik amaçlarla kullanılır."
+      },
+      "changes": {
+        "title": "Politika Değişiklikleri",
+        "content": "Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikler olduğunda sizi e-posta ile bilgilendireceğiz."
+      },
+      "contact": {
+        "title": "İletişim",
+        "content": "Gizlilik politikamızla ilgili sorularınız için bizimle iletişime geçebilirsiniz:",
+        "email": "E-posta",
+        "address": "Adres",
+        "addressValue": "İstanbul, Türkiye"
+      }
+    }
   }
 }

@@ -46,7 +46,7 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4 text-white">{t('footer.sections.legal.title')}</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-white hover:text-blue-100 transition-colors flex items-center gap-1"><ChevronRight className="h-3 w-3" /> {t('footer.sections.legal.privacy')}</a></li>
+              <li><a href="/privacy-policy" className="text-white hover:text-blue-100 transition-colors flex items-center gap-1"><ChevronRight className="h-3 w-3" /> {t('footer.sections.legal.privacy')}</a></li>
               <li><a href="#" className="text-white hover:text-blue-100 transition-colors flex items-center gap-1"><ChevronRight className="h-3 w-3" /> {t('footer.sections.legal.terms')}</a></li>
               <li><a href="#" className="text-white hover:text-blue-100 transition-colors flex items-center gap-1"><ChevronRight className="h-3 w-3" /> {t('footer.sections.legal.cookies')}</a></li>
               <li><a href="#" className="text-white hover:text-blue-100 transition-colors flex items-center gap-1"><ChevronRight className="h-3 w-3" /> {t('footer.sections.legal.kvkk')}</a></li>
